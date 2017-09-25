@@ -177,7 +177,7 @@ public class Tunnel: NSObject, SocketDelegate {
         adapterSocket = factory.getAdapterFor(session: session)
         adapterSocket!.delegate = self
         adapterSocket!.openSocketWith(session: session)
-        DDLogInfo("[\(adapterSocket?.typeName)] received \(adapterSocket!.session.host):\(adapterSocket!.session.port)")
+        DDLogInfo("[\(String(describing: adapterSocket?.typeName))] received \(adapterSocket!.session.host):\(adapterSocket!.session.port)")
     }
     
     public func didBecomeReadyToForwardWith(socket: SocketProtocol) {
